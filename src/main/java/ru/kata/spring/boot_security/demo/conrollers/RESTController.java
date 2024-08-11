@@ -17,7 +17,8 @@ import java.util.List;
 @RequestMapping("/api/admin")
 public class RESTController {
     private final UserService userService;
-@Autowired
+
+    @Autowired
     public RESTController(UserService userService) {
         this.userService = userService;
     }
@@ -63,6 +64,6 @@ public class RESTController {
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable("id") Long id) {
         userService.deleteUser(id);
-            return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 }

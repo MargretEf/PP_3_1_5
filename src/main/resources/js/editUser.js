@@ -1,7 +1,7 @@
 // Функция для отправки данных отредактированного пользователя на сервер
 async function sendDataEditUser(user) {
-    await fetch("/api/admin" ,
-        {method: "PUT", headers: {'Content-type': 'application/json'}, body: JSON.stringify(user)} )
+    await fetch("/api/admin",
+        {method: "PUT", headers: {'Content-type': 'application/json'}, body: JSON.stringify(user)})
     // Отправка PUT-запроса на сервер с телом запроса в формате JSON, содержащим данные пользователя
 }
 
@@ -14,17 +14,17 @@ async function EditModalHandler() {
 }
 
 // Добавление обработчика события на форму модального окна при отправке данных (submit)
-modalEdit.addEventListener("submit", async function(event){
+modalEdit.addEventListener("submit", async function (event) {
     event.preventDefault(); // Предотвращение стандартного поведения формы при отправке
 
     const rolesSelected = document.getElementById("rolesEdit"); // Получение элемента выбора ролей
 
-    let roles = []; // Создание пустого массива для ролей
-    for (let option of rolesSelected.selectedOptions) { // Перебор выбранных опций (ролей)
-        if(option.value === ROLE_USER.role) { // Если выбранная роль равна роли пользователя (USER)
-            roles.push(ROLE_USER); // Добавление роли USER в массив ролей
-        } else if (option.value === ROLE_ADMIN.role) { // Если выбранная роль равна роли администратора (ADMIN)
-            roles.push(ROLE_ADMIN); // Добавление роли ADMIN в массив ролей
+    let roles = [];
+    for (let option of rolesSelected.selectedOptions) {
+        if (option.value === "ROLE_USER") {
+            roles.push({id: 1, roleName: "ROLE_USER"}); // Здесь id 1 - пример, вам нужно использовать правильные id
+        } else if (option.value === "ROLE_ADMIN") {
+            roles.push({id: 2, roleName: "ROLE_ADMIN"}); // Здесь id 2 - пример, вам нужно использовать правильные id
         }
     }
 
@@ -42,7 +42,6 @@ modalEdit.addEventListener("submit", async function(event){
     await sendDataEditUser(user); // Отправка данных отредактированного пользователя на сервер
     await fillTableOfAllUsers(); // Обновление таблицы всех пользователей
 
-    const modalBootstrap = bootstrap.Modal.getInstance(modalEdit); // Получение экземпляра модального окна Bootstrap
-    modalBootstrap.hide(); // Скрытие модального окна после отправки данных
+    $('#editModal').modal('hide');
 });
 

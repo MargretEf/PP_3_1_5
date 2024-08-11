@@ -84,52 +84,72 @@
                             </div>
 
 
+                            <!-- Edit-->
+                            <div class="modal fade" id="editModal" tabindex="-1"
+                                 role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Edit User</h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="modalBodyEdit">
+                                                <div class="modal-body col-7 mx-auto text-center">
+                                                    <div class="mb-3">
+                                                        <label for="idEdit"
+                                                               class="form-label text-center fw-bold d-block">ID</label>
+                                                        <input type="text" id="idEdit"
+                                                               class="form-control form-control-sm" data-user-id='id'
+                                                               readonly/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="firstNameEdit"
+                                                               class="form-label text-center fw-bold d-block">First
+                                                            Name</label>
+                                                        <input type="text" id="firstNameEdit"
+                                                               class="form-control form-control-sm"
+                                                               data-user-id="name"/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="lastNameEdit"
+                                                               class="form-label text-center fw-bold d-block">Last
+                                                            Name</label>
+                                                        <input type="text" id="lastNameEdit"
+                                                               class="form-control form-control-sm"
+                                                               data-user-id="lastName"/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="ageEdit"
+                                                               class="form-label text-center fw-bold d-block">Age</label>
+                                                        <input type="number" id="ageEdit"
+                                                               class="form-control form-control-sm" data-user-id="age"/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="emailEdit"
+                                                               class="form-label text-center fw-bold d-block">Email</label>
+                                                        <input type="email" id="emailEdit"
+                                                               class="form-control form-control-sm"
+                                                               data-user-id="email"/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="passwordEdit"
+                                                               class="form-label text-center fw-bold d-block">Password</label>
+                                                        <input type="password" id="passwordEdit"
+                                                               class="form-control form-control-sm"
+                                                               data-user-id="password"/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="rolesEdit"
+                                                               class="form-label text-center fw-bold d-block">Roles:</label>
+                                                        <select id="rolesEdit" class="form-control form-control-sm"
+                                                                multiple data-user-id="rolesEdit">
 
-
-                                        <!-- Edit-->
-                               <div class="modal fade" id="editModal" tabindex="-1"
-                                     role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-md">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" >Edit User</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form id="modalBodyEdit">
-                                                    <div class="modal-body col-7 mx-auto text-center">
-                                                        <div class="mb-3">
-                                                            <label for="idEdit" class="form-label text-center fw-bold d-block">ID</label>
-                                                            <input type="text" id="idEdit" class="form-control form-control-sm" data-user-id='id' readonly />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="firstNameEdit" class="form-label text-center fw-bold d-block">First Name</label>
-                                                            <input type="text" id="firstNameEdit" class="form-control form-control-sm" data-user-id="name" readonly />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="lastNameEdit" class="form-label text-center fw-bold d-block">Last Name</label>
-                                                            <input type="text" id="lastNameEdit" class="form-control form-control-sm" data-user-id="lastName" readonly />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="ageEdit" class="form-label text-center fw-bold d-block">Age</label>
-                                                            <input type="number" id="ageEdit" class="form-control form-control-sm" data-user-id="age" readonly />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="emailEdit" class="form-label text-center fw-bold d-block">Email</label>
-                                                            <input type="email" id="emailEdit" class="form-control form-control-sm" data-user-id="email" readonly />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="passwordEdit" class="form-label text-center fw-bold d-block">Password</label>
-                                                            <input type="password" id="passwordEdit" class="form-control form-control-sm" data-user-id="password" readonly />
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label for="rolesEdit" class="form-label text-center fw-bold d-block">Roles:</label>
-                                                            <select id="rolesEdit" class="form-control form-control-sm" multiple data-user-id="rolesEdit" readonly>
-                                                            </select>
-                                                        </div>
+                                                        </select>
+                                                    </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close
@@ -137,12 +157,12 @@
                                                         <button type="submit" class="btn btn-primary">Edit
                                                         </button>
                                                     </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
                             <!-- Delete-->
 
@@ -151,7 +171,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" >Delete User</h5>
+                                            <h5 class="modal-title">Delete User</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -159,39 +179,63 @@
                                         <div class="modal-body">
                                             <form id="modalBodyDelete">
                                                 <div class="modal-body col-7 mx-auto text-center">
-                                                <div class="mb-3">
-                                                    <label for="idDelete" class="form-label text-center fw-bold d-block">ID</label>
-                                                    <input type="text" id="idDelete" class="form-control form-control-sm" data-user-id='id' readonly />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="nameDelete" class="form-label text-center fw-bold d-block">First Name</label>
-                                                    <input type="text" id="nameDelete" class="form-control form-control-sm" data-user-id="name" readonly />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="lastNameDelete" class="form-label text-center fw-bold d-block">Last Name</label>
-                                                    <input type="text" id="lastNameDelete" class="form-control form-control-sm" data-user-id="lastName" readonly />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="ageDelete" class="form-label text-center fw-bold d-block">Age</label>
-                                                    <input type="number" id="ageDelete" class="form-control form-control-sm" data-user-id="age" readonly />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="emailDelete" class="form-label text-center fw-bold d-block">Email</label>
-                                                    <input type="email" id="emailDelete" class="form-control form-control-sm" data-user-id="email" readonly />
-                                                </div>
                                                     <div class="mb-3">
-                                                        <label for="password" class="form-label text-center fw-bold d-block">Password</label>
-                                                        <input type="password" id="passwordDelete" class="form-control form-control-sm" data-user-id="password" readonly />
+                                                        <label for="idDelete"
+                                                               class="form-label text-center fw-bold d-block">ID</label>
+                                                        <input type="text" id="idDelete"
+                                                               class="form-control form-control-sm" data-user-id='id'
+                                                               readonly/>
                                                     </div>
-                                                <div class="mb-3">
-                                                    <label for="rolesDelete" class="form-label text-center fw-bold d-block">Roles:</label>
-                                                    <select id="rolesDelete" class="form-control form-control-sm" multiple data-user-id="rolesDelete" readonly>
-                                                    </select>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                                </div>
+                                                    <div class="mb-3">
+                                                        <label for="nameDelete"
+                                                               class="form-label text-center fw-bold d-block">First
+                                                            Name</label>
+                                                        <input type="text" id="nameDelete"
+                                                               class="form-control form-control-sm" data-user-id="name"
+                                                               readonly/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="lastNameDelete"
+                                                               class="form-label text-center fw-bold d-block">Last
+                                                            Name</label>
+                                                        <input type="text" id="lastNameDelete"
+                                                               class="form-control form-control-sm"
+                                                               data-user-id="lastName" readonly/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="ageDelete"
+                                                               class="form-label text-center fw-bold d-block">Age</label>
+                                                        <input type="number" id="ageDelete"
+                                                               class="form-control form-control-sm" data-user-id="age"
+                                                               readonly/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="emailDelete"
+                                                               class="form-label text-center fw-bold d-block">Email</label>
+                                                        <input type="email" id="emailDelete"
+                                                               class="form-control form-control-sm" data-user-id="email"
+                                                               readonly/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="password"
+                                                               class="form-label text-center fw-bold d-block">Password</label>
+                                                        <input type="password" id="passwordDelete"
+                                                               class="form-control form-control-sm"
+                                                               data-user-id="password" readonly/>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="rolesDelete"
+                                                               class="form-label text-center fw-bold d-block">Roles:</label>
+                                                        <select id="rolesDelete" class="form-control form-control-sm"
+                                                                multiple data-user-id="rolesDelete" readonly>
+                                                        </select>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close
+                                                        </button>
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
@@ -200,7 +244,7 @@
                             </div>
 
 
-                             <!-- Это переход на вкладку Add new user -->
+                            <!-- Это переход на вкладку Add new user -->
 
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="d-flex justify-content-center">
@@ -232,7 +276,7 @@
                                                             <label for="age" class="form-label fw-bold mb-0">Age</label>
                                                             <input type="number" class="form-control" id="age"
                                                                    placeholder="Age"
-                                                                   >
+                                                            >
                                                         </div>
                                                         <br>
                                                         <div class="form-group">
@@ -240,7 +284,7 @@
                                                                    class="form-label fw-bold mb-0">Email</label>
                                                             <input type="text" class="form-control" id="email"
                                                                    placeholder="Email"
-                                                                  >
+                                                            >
                                                         </div>
                                                         <br>
                                                         <div class="form-group">
@@ -275,8 +319,6 @@
                 </div>
 
 
-
-
                 <!-- Это вкладка ЮЗЕР с навигации -->
 
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
@@ -297,7 +339,7 @@
                             </tr>
                             </thead>
                             <tbody
-                            id="currentUserTable">
+                                    id="currentUserTable">
                             </tbody>
                         </table>
                     </div>
@@ -308,12 +350,7 @@
 </div>
 
 
-<script src="/js/app.js"></script>
-<script src="/js/fillTables.js"></script>
-<script src="/js/addUser.js"></script>
-<script src="/js/fillModal.js"></script>
-<script src="/js/deleteUser.js"></script>
-<script src="/js/editUser.js"></script>
+<!-- Подключение jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <!-- Подключение Popper.js (необходим для некоторых компонентов Bootstrap, например, для тултипов и поповеров) -->
@@ -322,7 +359,13 @@
 <!-- Подключение Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
+<!-- Ваши пользовательские скрипты -->
+<script src="/js/app.js"></script>
+<script src="/js/fillTables.js"></script>
+<script src="/js/addUser.js"></script>
+<script src="/js/fillModal.js"></script>
+<script src="/js/deleteUser.js"></script>
+<script src="/js/editUser.js"></script>
 
 </body>
 </html>

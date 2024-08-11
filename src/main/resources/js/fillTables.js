@@ -46,7 +46,7 @@ async function fillTableOfAllUsers() {
 }
 
 // Функция для заполнения таблицы текущего пользователя
-async function fillTableAboutCurrentUser(){
+async function fillTableAboutCurrentUser() {
     const currentUserTable = document.getElementById("currentUserTable"); // Получение элемента таблицы по ID
     const currentUser = await dataAboutCurrentUser(); // Получение данных о текущем пользователе
 
